@@ -15,6 +15,7 @@ script:
   - docker cp `pwd`/data_origin wrfrun:/root/wrfrun
   - docker exec "wrfrun" bash -c "ln -s -f -b /root/WRFV3/main/* /root/wrfrun/"
   - docker exec "wrfrun" bash -c "ln -s -f -b /root/WRFV3/run/* /root/wrfrun/"
+  - docker exec "wrfrun" bash -c "ls -lah /root/wrfrun/"
   - docker exec "wrfrun" bash -c "/root/wrfrun/real.exe"
   - docker exec "wrfrun" bash -c "cat /root/wrfrun/rsl.out.0000"
   - docker exec "wrfrun" bash -c "/root/wrfrun/wrf.exe"
