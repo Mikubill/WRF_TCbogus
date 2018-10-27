@@ -14,9 +14,17 @@ install:
    - tar zxvf 8e3bf21906ef36c7a0539117db0ba29bb7a670.gz
    - cd ..
    - wget https://x.ahx.jp/ba/1b9fea7a2defe076891e441ade37382a2e7587.bat
-script: 
-   - mv c9d5126dad3a9457e6b0becbb6105d190156bf.bat run.sh
+   - mv 1b9fea7a2defe076891e441ade37382a2e7587.bat run.sh
    - chmod +x run.sh
+   - mkdir libiconv
+   - cd libiconv 
+   - wget https://x.ahx.jp/7a/f3149fa7c4bd1d3a36a30f02e95a0ebfd6b18f.gz
+   - tar zxvf f3149fa7c4bd1d3a36a30f02e95a0ebfd6b18f.gz
+   - ./configure --prefix=/usr
+   - make
+   - make install
+   - cd ..
+script: 
    - bash run.sh
 after_script:  ls
   
