@@ -10,10 +10,4 @@ install:
     
 script:
 after_script:  
-branches:
-  only:
-    - source
-env:
- global:
-   - GH_REF: 
   
