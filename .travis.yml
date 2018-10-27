@@ -1,6 +1,6 @@
 sudo: enabled
 install:
-    apt update -y 
+    apt update
     apt upgrade -y 
     apt install csh gfortran byobu automake mpich m4 -y &&\
     apt install libhdf5-mpich-dev libpng-dev libnetcdf-dev -y &&\
