@@ -4,7 +4,7 @@ remove_storm = .true.
 vmax_meters_per_second = 20.7
 rmax = 116246.3,
 latc_loc = 20.7
-lonc_loc = 119.0
+lonc_loc = 119.2
 vmax_ratio = 121,
 /
 
