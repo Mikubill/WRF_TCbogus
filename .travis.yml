@@ -1,0 +1,6 @@
+  
+os: linux
+dist: xenial
+sudo: required
+install:
+   - sudo apt update

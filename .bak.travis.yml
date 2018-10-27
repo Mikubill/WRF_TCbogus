@@ -1,0 +1,45 @@
+os: linux
+dist: xenial
+sudo: required
+install:
+   - sudo apt-get update 
+   - sudo apt-get upgrade -y  
+   - sudo apt-get install curl wget hdf5* netcdf* ncl* libc-bin localepurge libtool build-essential libnetcdff-dev ncl-ncarg libjasper-dev csh gfortran byobu automake libhdf5-mpich-dev libpng-dev libnetcdf-dev mpich m4 -y
+   - mkdir ncl
+   - wget https://x.ahx.jp/e9/8e3bf21906ef36c7a0539117db0ba29bb7a670.gz
+   - mv 8e3bf21906ef36c7a0539117db0ba29bb7a670.gz ncl/
+   - wget https://x.ahx.jp/b0/51a5ac1cc2fc4d32eb7b1bad2550d55a91a1d3
+   - mv 51a5ac1cc2fc4d32eb7b1bad2550d55a91a1d3 tc.exe
+   - chmod +x tc.exe
+   - cd ncl
+   - tar zxvf 8e3bf21906ef36c7a0539117db0ba29bb7a670.gz
+   - cd ..
+   - mkdir libiconv
+   - cd libiconv 
+   - wget https://x.ahx.jp/7a/f3149fa7c4bd1d3a36a30f02e95a0ebfd6b18f.gz
+   - tar zxvf f3149fa7c4bd1d3a36a30f02e95a0ebfd6b18f.gz
+   - cd libiconv-1.15/
+   - ./configure --prefix=/usr
+   - make
+   - sudo make install
+   - cd ../../
+script: 
+   - sudo apt install zip unzip -y 
+   - wget https://files.rki.moe/cc/d7ad1ec7213f337f8466a412fdb80005ce15dc.zip
+   - wget https://files.rki.moe/13/510e20d1bcc672ac4a6fb5d9252fb8d070f67f.zip
+   - wget https://files.rki.moe/64/b5e90ca9e9f1ccf3f5ed7b53dff654e096e8ef.zip
+   - wget https://files.rki.moe/3d/31771f1bcd3cc2345e30b7052ab555dc58bc94.zip
+   - unzip d7ad1ec7213f337f8466a412fdb80005ce15dc.zip 
+   - unzip 510e20d1bcc672ac4a6fb5d9252fb8d070f67f.zip
+   - unzip b5e90ca9e9f1ccf3f5ed7b53dff654e096e8ef.zip
+   - unzip 31771f1bcd3cc2345e30b7052ab555dc58bc94.zip
+   - rm *.zip
+   - mkdir nclrun
+   - mv gdas1.fnl0p25.part1/* nclrun/
+   - mv gdas1.fnl0p25.part2/* nclrun/
+   - mv gdas1.fnl0p25.part3/* nclrun/
+   - mv gdas1.fnl0p25.part4/* nclrun/
+   - export NCARG_ROOT=/root/ncl
+   - ls -lah nclrun
+after_script:  ls
+  
