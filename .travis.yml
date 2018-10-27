@@ -1,8 +1,6 @@
-matrix:
-  include:
-    - os: linux
-      dist: bionic
-      sudo: required
+os: linux
+dist: xenial
+sudo: required
 install:
    - sudo apt-get update 
    - sudo apt-get upgrade -y  
