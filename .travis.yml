@@ -1,4 +1,5 @@
 sudo: enabled
+dist: Bionic
 install:
     sudo su &&\
     apt update &&\
