@@ -1,14 +1,7 @@
 begin
-
-; f = addfile("./auxinput1_d01_2017-07-28_18:00:00.nc","r")   ; Open a file
-
-filepath = systemfunc("ls auxinput*")
-f = addfile(filepath(0),"r")
-; f = addfile("met_em.d01.2017-07-29_00_00_00.nc","r")
-; type = "x11"
- type = "pdf"
-; type = "ps"
-; type = "ncgm"
+  filepath = systemfunc("ls auxinput*")
+  f = addfile(filepath(0),"r")
+  type = "png"
   wks = gsn_open_wks(type,"plt_geo_4")       ; Create a plot workstation
   wks1 = gsn_open_wks(type,"hgt30_4")
 
