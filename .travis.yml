@@ -1,9 +1,15 @@
 sudo: enabled
 
-language: node_js
-node_js:
-  - '7.5.0'
+language: bash
 install:
+    apt update -y 
+    apt upgrade -y 
+    apt install csh gfortran byobu automake mpich m4 -y &&\
+    apt install libhdf5-mpich-dev libpng-dev libnetcdf-dev -y &&\
+    apt install libnetcdff-dev ncl-ncarg libjasper-dev -y &&\
+    apt install libc-bin localepurge build-essential -y &&\
+    apt-get install hdf5* netcdf* ncl* -y
+    
 script: npm run build
 after_script:  
 branches:
