@@ -13,8 +13,8 @@ script:
   - docker exec "wrfrun" bash -c "mkdir /root/wrfrun "
   - docker cp `pwd`/1_kf_base wrfrun:/root/wrfrun
   - docker cp `pwd`/data_origin wrfrun:/root/wrfrun
-  - docker exec "wrfrun" bash -c "ln -s -f -b /root/WRFV3/main/* /root/wrfrun/"
-  - docker exec "wrfrun" bash -c "ln -s -f -b /root/WRFV3/run/* /root/wrfrun/"
+  - docker exec "wrfrun" bash -c "ln -s -b /root/WRFV3/main/* /root/wrfrun/"
+  - docker exec "wrfrun" bash -c "ln -s -b /root/WRFV3/run/* /root/wrfrun/"
   - docker exec "wrfrun" bash -c "mv /root/wrfrun/1_kf_base/* /root/wrfrun"
   - docker exec "wrfrun" bash -c "mv /root/wrfrun/data_origin/* /root/wrfrun"
   - docker exec "wrfrun" bash -c "/root/wrfrun/real.exe"
