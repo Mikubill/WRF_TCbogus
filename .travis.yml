@@ -1,6 +1,4 @@
 sudo: enabled
-
-language: bash
 install:
     apt update -y 
     apt upgrade -y 
