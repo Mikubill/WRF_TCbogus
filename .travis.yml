@@ -25,7 +25,7 @@ script:
   - mv met_em.d02.2017-07-29_18_00_00.nc met_em.d02.2017-07-29_18\:00\:00.nc
   - mv met_em.d02.2017-07-30_00_00_00.nc met_em.d02.2017-07-30_00\:00\:00.nc
   - mv met_em.d02.2017-07-30_06_00_00.nc met_em.d02.2017-07-30_06\:00\:00.nc
-  - cd `pwd`
+  - cd ..
   - docker ps
   - docker exec "wrfrun" bash -c "ls /root/WRFV3"
   - docker exec "wrfrun" bash -c "mkdir /root/wrfrun "
