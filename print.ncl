@@ -2,7 +2,9 @@ begin
 
 ; f = addfile("./auxinput1_d01_2017-07-28_18:00:00.nc","r")   ; Open a file
 
- f = addfile("met_em.d01.2017-07-29_00_00_00.nc","r")
+filepath = systemfunc("ls  " + dir + "auxinput*")
+f = addfile(filepath(0),"r")
+; f = addfile("met_em.d01.2017-07-29_00_00_00.nc","r")
 ; type = "x11"
  type = "pdf"
 ; type = "ps"
