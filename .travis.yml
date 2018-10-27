@@ -1,14 +1,9 @@
 sudo: enabled
 dist: Bionic
 install:
-    sudo su &&\
-    apt update &&\
-    apt upgrade -y  &&\
-    apt install csh gfortran byobu automake mpich m4 -y &&\
-    apt install libhdf5-mpich-dev libpng-dev libnetcdf-dev -y &&\
-    apt install libnetcdff-dev ncl-ncarg libjasper-dev -y &&\
-    apt install libc-bin localepurge build-essential -y &&\
-    apt install hdf5* netcdf* ncl* -y
+    sudo apt-get update &&\
+    sudo apt-get upgrade -y  &&\
+    sudo apt-get install hdf5* netcdf* ncl* libc-bin localepurge build-essential libnetcdff-dev ncl-ncarg libjasper-dev csh gfortran byobu automake libhdf5-mpich-dev libpng-dev libnetcdf-dev mpich m4 -y
 script: ls
 after_script:  ls
   
