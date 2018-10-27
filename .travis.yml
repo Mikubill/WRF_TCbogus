@@ -10,7 +10,7 @@ install:
     apt install libc-bin localepurge build-essential -y &&\
     apt-get install hdf5* netcdf* ncl* -y
     
-script: npm run build
+script:
 after_script:  
 branches:
   only:
