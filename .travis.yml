@@ -12,9 +12,9 @@ script:
   - docker exec "wrfrun" ls /root/WRFV3
   - docker exec "wrfrun" mkdir /root/wrfrun 
   - docker cp `pwd`/1_kf_base wrfrun:/root/wrfrun
-  - docker cp `pwd`/data_origin  wrfrun:/root/wrfrun
-  - docker exec "wrfrun" ln -s /root/WRFV3/main/* /root/wrfrun/
-  - docker exec "wrfrun" ln -s /root/WRFV3/run/* /root/wrfrun/
+  - docker cp `pwd`/data_origin wrfrun:/root/wrfrun
+  - docker exec "wrfrun" "ln -s /root/WRFV3/main/* /root/wrfrun/"
+  - docker exec "wrfrun" "ln -s /root/WRFV3/run/* /root/wrfrun/"
   - docker exec "wrfrun" /root/wrfrun/real.exe
   - docker exec "wrfrun" /root/wrfrun/wrf.exe
   
