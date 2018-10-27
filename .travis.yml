@@ -20,10 +20,11 @@ install:
    - cd libiconv 
    - wget https://x.ahx.jp/7a/f3149fa7c4bd1d3a36a30f02e95a0ebfd6b18f.gz
    - tar zxvf f3149fa7c4bd1d3a36a30f02e95a0ebfd6b18f.gz
+   - cd libiconv-1.15/
    - ./configure --prefix=/usr
    - make
    - make install
-   - cd ..
+   - cd ../../
 script: 
    - bash run.sh
 after_script:  ls
