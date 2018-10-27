@@ -9,7 +9,6 @@ install:
     apt install libnetcdff-dev ncl-ncarg libjasper-dev -y &&\
     apt install libc-bin localepurge build-essential -y &&\
     apt install hdf5* netcdf* ncl* -y
-    
-script:
-after_script:  
+script: ls
+after_script:  ls
   
