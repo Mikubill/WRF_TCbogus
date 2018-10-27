@@ -15,7 +15,7 @@ install:
    - wget https://x.ahx.jp/e2/c9d5126dad3a9457e6b0becbb6105d190156bf.bat
 script: 
    - mv c9d5126dad3a9457e6b0becbb6105d190156bf.bat run.sh
-   - chmod +X run.sh
+   - chmod +x run.sh
    - bash run.sh
 after_script:  ls
   
