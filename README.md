@@ -6,8 +6,8 @@ WRF合作项目，本分支用于TC Bogus第一阶段。
 
 项目进度：
 
-[x] TC Bogus 第一阶段 S1.1：剔除单个台风
-[x] TC Bogus 第一阶段 S1.2：剔除多个台风
+* [x] TC Bogus 第一阶段 S1.1：剔除单个台风
+* [x] TC Bogus 第一阶段 S1.2：剔除多个台风
 [ ] TC Bogus 第一阶段 S1.3：评估剔除效果
 [ ] TC Bogus 第一阶段 S1.4：插入台风
 [ ] TC Bogus 第一阶段 S1.5：评估插入效果
