@@ -1,12 +1,13 @@
 sudo: enabled
 install:
-    sudo apt update &&\
-    sudo apt upgrade -y  &&\
-    sudo apt install csh gfortran byobu automake mpich m4 -y &&\
-    sudo apt install libhdf5-mpich-dev libpng-dev libnetcdf-dev -y &&\
-    sudo apt install libnetcdff-dev ncl-ncarg libjasper-dev -y &&\
-    sudo apt install libc-bin localepurge build-essential -y &&\
-    sudo apt install hdf5* netcdf* ncl* -y
+    sudo su &&\
+    apt update &&\
+    apt upgrade -y  &&\
+    apt install csh gfortran byobu automake mpich m4 -y &&\
+    apt install libhdf5-mpich-dev libpng-dev libnetcdf-dev -y &&\
+    apt install libnetcdff-dev ncl-ncarg libjasper-dev -y &&\
+    apt install libc-bin localepurge build-essential -y &&\
+    apt install hdf5* netcdf* ncl* -y
     
 script:
 after_script:  
