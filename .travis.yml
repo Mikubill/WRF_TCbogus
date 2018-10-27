@@ -1,5 +1,8 @@
-sudo: enabled
-dist: Bionic
+matrix:
+  include:
+    - os: linux
+      dist: bionic
+      sudo: required
 install:
     sudo apt-get update &&\
     sudo apt-get upgrade -y  &&\
