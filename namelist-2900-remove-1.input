@@ -3,8 +3,8 @@ insert_bogus_storm = .false.
 remove_storm = .true.
 vmax_meters_per_second = 36.7
 rmax = 115000.0,
-latc_loc = 21.7
-lonc_loc = 122.3
+latc_loc = 22.4
+lonc_loc = 122.9
 vmax_ratio = 220,
 /
 
