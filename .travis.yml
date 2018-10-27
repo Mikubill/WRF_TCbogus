@@ -4,7 +4,7 @@ sudo: required
 install:
    - sudo apt-get update 
    - sudo apt-get upgrade -y  
-   - sudo apt-get install wget hdf5* netcdf* ncl* libc-bin localepurge build-essential libnetcdff-dev ncl-ncarg libjasper-dev csh gfortran byobu automake libhdf5-mpich-dev libpng-dev libnetcdf-dev mpich m4 -y
+   - sudo apt-get install wget hdf5* netcdf* ncl* libc-bin localepurge libtool build-essential libnetcdff-dev ncl-ncarg libjasper-dev csh gfortran byobu automake libhdf5-mpich-dev libpng-dev libnetcdf-dev mpich m4 -y
    - mkdir ncl
    - wget https://x.ahx.jp/e9/8e3bf21906ef36c7a0539117db0ba29bb7a670.gz
    - mv 8e3bf21906ef36c7a0539117db0ba29bb7a670.gz ncl/
