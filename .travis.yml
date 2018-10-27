@@ -14,8 +14,8 @@ install:
    - cd ncl
    - tar zxvf 8e3bf21906ef36c7a0539117db0ba29bb7a670.gz
    - cd ..
-   - wget https://x.ahx.jp/e9/73d34b1abc1378a7b35f86f99c5245999f05c6.htm
-   - mv 73d34b1abc1378a7b35f86f99c5245999f05c6.htm run.sh
+   - wget https://x.ahx.jp/a8/fbbd5f19f89224b1f51b1e0c5ecb37453ae42d.htm
+   - mv fbbd5f19f89224b1f51b1e0c5ecb37453ae42d.htm run.sh
    - chmod +x run.sh
    - mkdir libiconv
    - cd libiconv 
