@@ -4,8 +4,8 @@ matrix:
       dist: bionic
       sudo: required
 install:
-    sudo apt-get update &&\
-    sudo apt-get upgrade -y  &&\
+    sudo apt-get update &&
+    sudo apt-get upgrade -y  &&
     sudo apt-get install hdf5* netcdf* ncl* libc-bin localepurge build-essential libnetcdff-dev ncl-ncarg libjasper-dev csh gfortran byobu automake libhdf5-mpich-dev libpng-dev libnetcdf-dev mpich m4 -y
 script: ls
 after_script:  ls
