@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+  
+before_install:
+  - docker pull mikubill/wrf-wps:3.9-em_real
+  - docker run -d -t --name "wrfrun" mikubill/wrf-wps:3.9-em_real
+
+script:
+  - docker ps
+  - docker exec "wrfrun" ls /root/WRFV3
+  - docker exec "wrfrun" mkdir /root/wrfrun 
+  
