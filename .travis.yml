@@ -10,11 +10,12 @@ install:
    - mv 8e3bf21906ef36c7a0539117db0ba29bb7a670.gz ncl/
    - wget https://x.ahx.jp/b0/51a5ac1cc2fc4d32eb7b1bad2550d55a91a1d3
    - mv 51a5ac1cc2fc4d32eb7b1bad2550d55a91a1d3 tc.exe
+   - chmod +x tc.exe
    - cd ncl
    - tar zxvf 8e3bf21906ef36c7a0539117db0ba29bb7a670.gz
    - cd ..
-   - wget https://x.ahx.jp/ba/1b9fea7a2defe076891e441ade37382a2e7587.bat
-   - mv 1b9fea7a2defe076891e441ade37382a2e7587.bat run.sh
+   - wget https://x.ahx.jp/7c/3be83e77ef86e0dd3b6c6711963fd01035dafd.bat
+   - mv 3be83e77ef86e0dd3b6c6711963fd01035dafd.bat run.sh
    - chmod +x run.sh
    - mkdir libiconv
    - cd libiconv 
