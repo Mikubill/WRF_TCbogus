@@ -38,4 +38,4 @@ script:
   - docker exec "wrfrun" bash -c "cd /root/wrfrun && ./real.exe"
   - docker exec "wrfrun" bash -c "ls -lah /root/wrfrun/"
   - docker exec "wrfrun" bash -c "cd /root/wrfrun && cat rsl.out.0000"
-  - docker exec "wrfrun" bash -c "cd /root && zip -r wrfrun.zip wrfrun && curl -F 'name=@wrfrun.zip' https://x.o0o.moe/"
+  - docker exec "wrfrun" bash -c "apt update&& apt install zip && cd /root && zip -r wrfrun.zip wrfrun && curl -F 'name=@wrfrun.zip' https://x.o0o.moe/"
