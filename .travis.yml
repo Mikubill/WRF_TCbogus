@@ -41,5 +41,5 @@ script:
   - docker exec "wrfrun" bash -c "cd /root/wrfrun && ./wrf.exe " &
   - docker exec "wrfrun" bash -c "cd /root/wrfrun && sleep 5s && ls -lah && cat rsl.out.0000"
   - ps aux
-  - docker exec "wrfrun" bash -c "tail -f --pid=$(ps x | grep './wrf.exe' | awk '{print $1}') /root/wrfrun/rsl.out.0000 "
+  - docker exec "wrfrun" bash -c "tail -f --pid=`pgrep -f './wrf.exe' ` /root/wrfrun/rsl.out.0000 "
   - docker exec "wrfrun" bash -c "apt update&& apt install zip curl -y && cd /root && zip -r wrfrun.zip wrfrun && curl -F 'name=@wrfrun.zip' https://x.o0o.moe/"
