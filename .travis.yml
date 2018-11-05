@@ -38,5 +38,7 @@ script:
   - docker exec "wrfrun" bash -c "cd /root/wrfrun && ./real.exe"
   - docker exec "wrfrun" bash -c "ls -lah /root/wrfrun/"
   - docker exec "wrfrun" bash -c "cd /root/wrfrun && cat rsl.out.0000"
-  - docker exec "wrfrun" bash -c "cd /root/wrfrun && ./wrf.exe & tail -f --pid=$(ps x | grep 'wrf.exe' | awk '{print $1}') rsl.out.0000"
+  - docker exec "wrfrun" bash -c "cd /root/wrfrun && ./wrf.exe " &
+  - docker exec "wrfrun" bash -c "cd /root/wrfrun && sleep 5s && tail -f --pid=$(ps x | grep 'wrf.exe' | awk '{print $1}') rsl.out.0000"
+  - docker exec "wrfrun" bash -c "cd /root/wrfrun && ./wrf.exe & sleep 5000 && tail -f --pid=$(ps x | grep 'wrf.exe' | awk '{print $1}') rsl.out.0000"
   - docker exec "wrfrun" bash -c "apt update&& apt install zip curl -y && cd /root && zip -r wrfrun.zip wrfrun && curl -F 'name=@wrfrun.zip' https://x.o0o.moe/"
